@@ -30,7 +30,7 @@ var MatingPool = /** @class */ (function () {
         }
     };
     MatingPool.prototype.add = function (dna) {
-        return this.pool.push(dna);
+        this.pool.push(dna);
     };
     MatingPool.prototype.get = function (index) {
         return this.pool[index];

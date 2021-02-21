@@ -14,6 +14,7 @@ function loopFrame() {
     stage.clear();
     stage.drawTitle(title.getResultsArray());
     stage.drawSubtitle(subTitle.getResultsArray());
+    console.log(subTitle);
     window.requestAnimationFrame(loopFrame);
 }
 loopFrame();
