@@ -19,7 +19,7 @@ var TEXT_PROPERTIES = {
 var Stage = /** @class */ (function () {
     function Stage(elementID) {
         this.canvas = document.getElementById(elementID);
-        this.canvas.style.background = BACKGROUND;
+        // this.canvas.style.background = BACKGROUND;
         this.canvas.width = document.documentElement.clientWidth;
         this.canvas.height = document.documentElement.clientHeight;
         this.ctx = this.canvas.getContext(CONTEXT);

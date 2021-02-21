@@ -15,11 +15,11 @@ export default class DNA {
     }
   }
 
-  newRandomCharacter() {
+  newRandomCharacter(): string {
     return String.fromCharCode(getRandomIntFromInterval(32, 128));
   }
 
-  fitness() {
+  fitness(): number {
     let score = 0;
     for (var i = 0; i < this.genes.length; i++) {
       if (this.genes[i] === this.target.charAt(i)) {
@@ -31,7 +31,7 @@ export default class DNA {
     return this.fitnessScore;
   }
 
-  crossOver(partner: DNA) {
+  crossOver(partner: DNA): DNA {
     const child = new DNA(this.target);
     const midpoint = getRandomIntFromInterval(0, this.target.length);
     for (var i = 0; i < this.genes.length; i++) {
@@ -44,7 +44,7 @@ export default class DNA {
     return child;
   }
 
-  mutate(mutationRate: number) {
+  mutate(mutationRate: number): void {
     for (var i = 0; i < this.genes.length; i++) {
       if (Math.random() < mutationRate) {
         this.genes[i] = this.newRandomCharacter();
@@ -52,7 +52,7 @@ export default class DNA {
     }
   }
 
-  getPhrase() {
+  getPhrase(): string {
     return this.genes.join("").toUpperCase();
   }
 }

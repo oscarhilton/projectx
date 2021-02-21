@@ -7,7 +7,7 @@ export default class Population {
     this.members = this.makePopulation(populationSize, target);
   }
 
-  makePopulation(populationSize: number, target: string) {
+  makePopulation(populationSize: number, target: string): DNA[] {
     let population = [];
     for (var i = 0; i < populationSize; i++) {
       population[i] = new DNA(target);
@@ -15,7 +15,7 @@ export default class Population {
     return population;
   }
 
-  makeResultsArray() {
+  makeResultsArray(): string[] {
     return this.members.map(dna => dna.getPhrase());
   }
 }

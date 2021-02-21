@@ -10,7 +10,7 @@ export default class MatingPool {
     this.mutationRate = mutationRate;
   }
 
-  assetFittness(population: DNA[]) {
+  assetFittness(population: DNA[]): void {
     this.pool = [];
     let total = 0;
     for (var i = 0; i < population.length; i++) {
@@ -29,15 +29,15 @@ export default class MatingPool {
     }
   }
 
-  add(dna: DNA) {
-    return this.pool.push(dna);
+  add(dna: DNA): void {
+    this.pool.push(dna);
   }
   
-  get(index: number) {
+  get(index: number): DNA{
     return this.pool[index];
   }
 
-  reproduce() {
+  reproduce(): DNA {
     const a = getRandomIntFromInterval(0, this.pool.length - 1);
     const b = getRandomIntFromInterval(0, this.pool.length - 1);
 

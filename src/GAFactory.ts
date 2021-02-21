@@ -10,11 +10,11 @@ export default class GAFactory {
     this.matingPool = new MatingPool(mutationRate);
   }
 
-  run() {
+  run(): void {
     this.matingPool.assetFittness(this.population.members);
   }
 
-  getResultsArray() {
+  getResultsArray(): string[] {
     return this.population.makeResultsArray();
   }
 }
