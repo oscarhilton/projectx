@@ -1,0 +1,11 @@
+body, html {
+  background: black;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Futurist';
+  src: url('../fonts/futurist.ttf');
+}
