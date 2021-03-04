@@ -6,8 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Stage_1 = __importDefault(require("./Stage"));
 var GAFactory_1 = __importDefault(require("./GAFactory"));
 var stage = new Stage_1.default("mainStage");
-var title = new GAFactory_1.default(300, "Artemis Harp", 0.01);
-var subTitle = new GAFactory_1.default(200, "Defining greatness in deep tech leadership", 0.01);
+var title = new GAFactory_1.default(300, "This is a genorated heading!", 0.01);
+var subTitle = new GAFactory_1.default(200, "And this is a subheading!", 0.01);
 function loopFrame() {
     title.run();
     subTitle.run();
